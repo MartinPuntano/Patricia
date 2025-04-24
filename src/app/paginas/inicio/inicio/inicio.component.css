@@ -52,7 +52,7 @@ body {
 
 /*Resposividad para pantallas chicas*/
 @media(max-width:600px) {
-    .card-contairer {
+    .card-container {
         flex-direction: column; /*Cambia a columna*/
         align-items: center; /*Centra en pantallas chicas*/
     }

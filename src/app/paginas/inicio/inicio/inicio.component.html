@@ -1,0 +1,21 @@
+<!--
+<div *ngFor="let producto of productos; let i = index">
+    <p>{{ i * 1 }}. Nombre: {{ producto.nombre }} </p>
+    <p>Precio: {{ producto.precio }} </p>
+  </div>
+-->
+<h5 align="center">LOS MAS VENDIDOS</h5>
+<div class="card-container">
+
+<div *ngFor="let inicio of inicio; let i = index" class="card">
+  <img src="{{ inicio.imagen }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ inicio.nombre }}</h5>
+    <h4 class="card-text"> {{ inicio.precio }} </h4>
+    <p class="card-text"> {{ inicio.descripcion }} </p>
+    <a routerLink="/carrito" class="btn btn-primary">Ver carrito</a>
+  </div>
+  
+</div>
+
+</div>
