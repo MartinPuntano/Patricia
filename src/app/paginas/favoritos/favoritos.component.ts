@@ -13,10 +13,10 @@ selector: 'app-carrito',
 export class favoritosComponent implements OnInit {
   productosEnFavoritos: {producto:Producto; cantidad:number}[] = [];
 
-  constructor(private favoritosService : FavoritosService) {}
+  constructor(private FavoritosService : FavoritosService) {}
 
   ngOnInit(): void {
-    this.favoritosService.favoritos$.subscribe((productos) => {
+    this.FavoritosService.favoritos$.subscribe((productos) => {
       this.productosEnFavoritos = productos
     });
   }
@@ -26,7 +26,13 @@ agregarAFavoritos(index: number){
 }
 
 eliminarFavoritos(productoId:number){
-  this.favoritosService.eliminarFavoritos(productoId)
+  this.FavoritosService.eliminarFavoritos(productoId)
 }
+
+agregarF(producto: Producto){
+  this.FavoritosService.agregarAFavoritos(producto)
+  alert('Producto agregado al carrito') //Muestra el mensaje
+}
+
 
 }
